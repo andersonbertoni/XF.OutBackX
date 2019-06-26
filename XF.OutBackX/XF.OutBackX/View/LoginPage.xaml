@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XF.OutBackX.View.LoginPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Entry Placeholder="Informe o Login" Text="{Binding LoginModel.Login}" />
+            <Entry Placeholder="Informe a Senha" Text="{Binding LoginModel.Senha}" IsPassword="True" />
+            <Button Text="Entrar" Command="{Binding OnEntrar}" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XF.OutBackX.View.CadastroRestauranteView">
+    <ContentPage.Content>
+        <StackLayout>
+            <Entry Placeholder="Informe o Nome do Restaurante" Text="{Binding RestauranteModel.Nome}" />
+            <Entry Placeholder="Informe o Endereço do Restaurante" Text="{Binding RestauranteModel.Endereco}" />
+            <Entry Placeholder="Latitude" Text="{Binding RestauranteModel.Latitude}" />
+            <Entry Placeholder="Longitude" Text="{Binding RestauranteModel.Longitude}" />
+            <Button Text="Cadastrar" Command="{Binding OnCadastrar}" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
