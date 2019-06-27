@@ -9,17 +9,19 @@ namespace XF.OutBackX
     public partial class App : Application
     {
         public LoginViewModel LoginVM { get; set; }
+        public RestauranteViewModel RestauranteVM { get; set; }
         public App()
         {
             InitializeComponent();
             InitializeViewModels();
 
-            MainPage = new NavigationPage(new View.MainPage());
+            MainPage = new NavigationPage(new View.MainPage() { BindingContext = RestauranteVM });
         }
 
         private void InitializeViewModels()
         {
             this.LoginVM = new LoginViewModel();
+            this.RestauranteVM = new RestauranteViewModel();
         }
 
         protected override void OnStart()

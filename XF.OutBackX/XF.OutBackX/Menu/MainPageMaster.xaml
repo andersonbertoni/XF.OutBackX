@@ -1,19 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="XF.OutBackX.View.ListaRestauranteView">
+             x:Class="XF.OutBackX.Menu.MainPageMaster">
     <ContentPage.Content>
-        <StackLayout>
-            <ListView>
+        <StackLayout Padding="20">
+            <Label Text="Menu" FontSize="16" />
+            <ListView x:Name="lstMenu" SeparatorVisibility="None">
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                        <ViewCell>
-                            <ViewCell.ContextActions>
-                                <ToolbarItem>
-                                    
-                                </ToolbarItem>
-                            </ViewCell.ContextActions>
-                        </ViewCell>
+                        <ImageCell Text="{Binding Descricao}"
+                                       ImageSource="{Binding Icone}" />
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
